@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpaceX Launches</title>
+    <!--For the CSS, Bootstrap is used and here is the link for that-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4 text-center">SpaceX Launches</h1>
+
+        <!-- Here 2 Specific filters are used-->
+        <!-- Launch Year: To show data for years between 2006-2020, if kept blank- show data for all years, and to fetch data related to specific year between 2006-2020 , input the year.--> 
+        <!-- Launch Success: It has 3 options a.) All: show data for both success and failure status. b.) True: Show data related to status-Success only. c.) False: Show data related to status-Failure only. -->
+        <div class="form-row mb-3">
+            <div class="col-md-6 mb-3">
+                <label for="launchYear">Launch Year:</label>
+                <input type="text" class="form-control" id="launchYear" placeholder="Enter launch year range">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="launchSuccess">Launch Success:</label>
+                <select class="form-control" id="launchSuccess">
+                    <option value="">All</option>
+                    <option value="true">True</option>
+                    <option value="false">False</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Here is the search bar section, it has a.) Search Category: You can choose between 2 options- Mission and Rocket. b.) Search Query: You can input mission name or rocket name here. -->
+        <div class="form-row mb-3">
+            <div class="col-md-6 mb-3">
+                <label for="searchCategory">Search Category:</label>
+                <select class="form-control" id="searchCategory">
+                    <option value="mission">Mission</option>
+                    <option value="rocket">Rocket</option>
+                </select>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="searchQuery">Search Query:</label>
+                <input type="text" class="form-control" id="searchQuery" placeholder="Enter search query">
+            </div>
+        </div>
+
+        <!-- This section show data after filter and search option applied. -->
+        <div id="results" class="table-responsive"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCO1dhCSz0UkMnFbCjBEAdq25cZAtYF5Z6FhL5K8pXjvP0ay3KuCBPFFXM8Gn" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjO1RrZmZqJwPCBExl40AeFn/x5zOGp3z5fmarWdI9q4j2DAp1M2nL2fR2fQV9p" crossorigin="anonymous"></script>
+    <!-- This section is used to add javascript file called code.js in HTML. This code.js file contains javascript code which is used to add functionality/logic to show desired result. -->
+    <script src="code.js"></script>
+</body>
+</html>
